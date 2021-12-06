@@ -1,0 +1,34 @@
+<div class="mainpage-container">
+    <div class="left-nav-bar">
+        <div class="nav-bar-link-container">
+            <!-- routerLinkActive="selected" : only apply the selected class to the <a> when the user is in that routerLink-->
+            <a routerLink="/home/search" routerLinkActive="selected" class="link-container-item">
+                <i class="fas fa-search nav-bar-icon"></i>
+                Search
+            </a>
+            <a routerLink="/home/readme" routerLinkActive="selected" class="link-container-item">
+                <i class="fas fa-bookmark nav-bar-icon"></i>
+                Readme
+            </a>
+            <a routerLink="/home/article" routerLinkActive="selected" class="link-container-item">
+                <i class="fas fa-bookmark nav-bar-icon"></i>
+                Article
+            </a>
+            <a routerLink="/home/map" routerLinkActive="selected" class="link-container-item">
+                <i class="fas fa-globe nav-bar-icon"></i>
+                Map
+            </a>
+            <a routerLink="/home/contactus" routerLinkActive="selected" class="link-container-item">
+                <i class="fas fa-envelope nav-bar-icon"></i>
+                Contact Us
+            </a>
+            <a routerLink="/home/contactus" routerLinkActive="selected" class="link-container-item">
+                <i class="fas fa-sign-in-alt nav-bar-icon"></i>
+                Login
+            </a>
+        </div>
+    </div>
+    <div class="right-content-area">
+        <router-outlet></router-outlet>
+    </div>
+</div>

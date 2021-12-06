@@ -1,0 +1,53 @@
+
+<h1 class="map-title">Find AquaPlants shop</h1>
+<div class="switch-container">
+    <button class="switch" *ngIf=!switchMapList (click)="switchShowList()">Map View</button>
+    <button class="switch" *ngIf=switchMapList (click)="switchShowList()">List View</button>
+</div>
+<div class="background">
+    <div class="note-container">
+        <p>Find nearest AquaPlants shop here.<br>Select your country, choose list or map view.</p>
+        <p>This map will also show all other pet shops that sells Aquatic plants. For those shop, please contact them to ask about availability of aquatic plants.</p>
+        <ul class="row">
+            <li><i class="fas fa-map-marker" style="color: rgb(0, 0, 0);"></i> <span>  Shop and Webshop. The shop provide both webshop and in-store shopping.</span></li>
+            <li><i class="fas fa-map-marker" style="color: rgb(126, 255, 126);"></i> <span>  Webshop. The shop only provides webshop.</span></li>
+            <li><i class="fas fa-map-marker" style="color: rgb(126, 126, 255);"></i> <span>  AquaPlants suggest shop. These shops were verify by AquaPlants .</span></li>
+            <li><i class="fas fa-map-marker" style="color: rgb(255, 126, 126);"></i> <span>  No information. Please contact the shop to ask for detail information.</span></li>
+        </ul>
+    </div>
+</div>
+<div class="map-container" *ngIf=switchMapList>
+    <!--Google map, code is ready in local, c:\xampp\htdocs\AquaplantsProject\map\searchShop-->
+    <!--Not paying currently so Do not put it in before deploy-->
+    <div id="map"></div>
+</div>
+
+<div class="list-container" *ngIf=!switchMapList>
+    <!--One card contain one store information -->
+    <div class="cards-container" *ngFor="let store of stores">
+        <div class="card">
+            <div class="store-sign-contianer" [ngSwitch]="store.shopType">
+                <div *ngSwitchCase="'Shop'">
+                    <i class="fas fa-map-marker" style="color: rgb(0, 0, 0);"></i>
+                </div>
+                <div *ngSwitchCase="'Webshop'">
+                    <i class="fas fa-map-marker" style="color: rgb(126, 255, 126);"></i>
+                </div>
+                <div *ngSwitchCase="'Suggest'" style="color: rgb(126, 126, 255);">
+                    <i class="fas fa-map-marker"></i>
+                </div>
+                <div *ngSwitchDefault class="NoInfo">
+                    <i class="fas fa-map-marker" style="color: rgb(255, 126, 126);"></i>
+                </div>
+            </div>
+            <div class="info-container">
+                <div class="store-name"><h3>{{ store.name }}</h3></div>
+                <div class="store-info"><p>{{ addressPrefix.concat(store.address) }}</p></div>
+                <div class="store-info"><p>{{ phoneNumPrefix.concat(store.phoneNum) }}</p></div>
+            </div>
+            
+        </div>
+    </div>
+    
+</div>
+

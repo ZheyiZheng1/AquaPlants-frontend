@@ -1,0 +1,165 @@
+.mainpage-container {
+    height: 100%;
+    background-color: rgb(35, 42, 58);
+    display: flex;
+}
+
+.welcome-nav-bar {
+    background: rgba(0, 0, 0, 0.2);
+    height: 70px;
+    width: 100%;
+}
+
+.nav-bar-link-container {
+    height: 50px;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.aquaPlants-sign{
+    width: 200px;
+    height: 70px;
+    font-size: 30px;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Roboto';
+    cursor: pointer;
+    padding-left: 50px;
+    padding-right: 800px;
+    padding-bottom: 10px;
+}
+
+.link-container-item {
+    width: 200px;
+    height: 70px;
+    font-size: 30px;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Roboto';
+    cursor: pointer;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.content-area {
+    width: 100%;
+    height: 180%;
+}
+
+.content-part-one {
+    width: 100%;
+    height: 935px;
+    background: url(/assets/images/nolan-krattinger-ADcXaqQ9vOM-unsplash1.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.content-part-one-logo-wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%; 
+    margin-left: -50px;
+    margin-top: -110px;
+}
+
+.content-part-one-logo {
+    width: 100px;
+    height: 100px;
+        
+}
+
+.content-part-one-para {
+    color: rgb(255, 255, 255); 
+    font-family: "Roboto";
+    position: absolute;
+    left: 50%;
+    top: 50%; 
+}
+
+.content-part-one-slogan {
+    font-size: 40px;
+    margin-left: -520px;
+    margin-top: 60px;
+}
+
+.content-part-one-scroll-down {
+    color: rgba(255, 255, 255, 0.5); 
+    font-size: 24px;
+    margin-left: -115px;
+    margin-top: 370px;
+}
+
+.content-part-one-icon {
+    color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -1px;
+    margin-top: 410px;
+}
+
+.content-part-two {
+    width: 100%;
+    height: 1650px;
+}
+
+.content-part-two-row {
+    width: 100%;
+    height: 550px;
+}
+
+.part-two-row-two {
+    background-color: rgb(230, 230, 230);
+}
+
+.part-two-row-one-title {
+    margin-top: 12%;
+    margin-left: 20%;
+    color: rgb(230, 230, 230);
+    font-size: 40px;
+    float: left;
+}
+
+.part-two-row-one-para {
+    margin-top: 7%;
+    margin-left: 370px;
+    margin-right: 20%;
+    width: 500px;
+    color: rgb(230, 230, 230);
+    font-size: 24px;
+    float: left;
+}
+
+.row-two-column {
+    width: 33.333%;
+    height: 550px;
+    float: left;
+}
+
+.row-two-column-title {
+    color: rgb(35, 42, 58);
+    margin-top: 150px;
+    margin-left: 50px;
+    font-size: 30px;
+}
+
+.row-two-column-para {
+    color: rgb(35, 42, 58);
+    width: 400px;
+    margin-top: 18px;
+    margin-left: 50px;
+}
+
+.part-two-row-three-title {
+    color: rgb(230, 230, 230);
+    font-size: 30px;
+    padding-top: 150px;
+    padding-left: 450px;
+}
+
+.part-two-row-three-para {
+    color: rgb(230, 230, 230);
+    font-size: 18px;
+    width: 1000px;
+    padding-top: 30px;
+    padding-left: 450px;
+}

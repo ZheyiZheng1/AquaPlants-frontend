@@ -1,0 +1,30 @@
+<div class="content-container">
+    <div class="row">
+        <div class="name-container">
+            <p>{{plant.name}}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="img-container">
+            <img src={{plant.imageUrl}} alt={{plant.name}} class="search-result-image">
+        </div>
+        <div class="text-container">
+            <p>Type: {{plant.type}}</p>
+            <p>Origin: {{plant.origin}}</p> <div class="subnote"><p>Country or continent where a plant is the most common. Cultivars arise or are bred in cultivation.</p></div>
+            <p>Growth Rate: {{plant.growthRate}}</p> <div class="subnote"><p>Growth rate of the plant compared to other aquatic plants.</p></div>
+            <p>Average Height: {{plant.averageHeight}}</p> <div class="subnote"><p>Average height (cm) of the plant after two months in the tank.</p></div>
+            <p>Light Demand: {{plant.lightDemand}}</p> <div class="subnote"><p>The average or medium light demand of an aquarium plant is 0.5 Watt/Liter.</p></div>
+            <p>CO₂ Demand: {{plant.co2Demand}}</p> <div class="subnote"><p>A medium need in CO2 is 6-14 mg/L. A high demand in CO2 is approx. 15-25 mg/L.</p></div>
+            <p>Difficult: {{plant.level}}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="description-container">
+            <p>Description:</p>
+            <p>{{plant.description}}</p>
+        </div>
+        
+    </div>
+    
+</div>
+<router-outlet></router-outlet>

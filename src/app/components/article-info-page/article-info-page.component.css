@@ -1,0 +1,26 @@
+.content-container {
+    width: 1300px;
+    margin-left: 100px;
+}
+
+.title-container {
+    align-items: center;
+    color: rgb(255, 255, 255);
+    font-size: 45px;
+}
+
+.date-container {
+    margin-top: 60px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+}
+
+.article-content-container {
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+}
+
+.newline-setting {
+    /* this will force angular show \n and \r*/
+    white-space: pre-line;
+}

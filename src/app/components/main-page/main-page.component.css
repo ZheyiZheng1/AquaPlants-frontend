@@ -1,0 +1,74 @@
+.mainpage-container {
+    height: 100%;
+    background-color: rgb(35, 42, 58);
+    display: flex;
+}
+
+.left-nav-bar {
+    background: rgba(0, 0, 0, 0.2);
+    height: 100%;
+    width: 300px;
+}
+
+.nav-bar-link-container {
+    padding-top: 150px;
+}
+
+.link-container-item {
+    display: flex;
+    position: relative;
+    align-items: center;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 10px 20px;
+    font-family: 'Roboto';
+    cursor: pointer;
+}
+
+.link-container-item.selected {
+    color: rgba(255, 255, 255, 1);
+}
+
+.link-container-item:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.link-container-item::before {
+    /*left side bar on links*/
+    /* This is a sudo element for animation purpose. It will not show if it does not have content.*/
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 3px;
+    background-color: aqua;
+    /* Set opacity to 0, as default */
+    opacity: 0;
+    /* Transform let the bar expand, transition set the time*/
+    transform: scaleY(0);
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.link-container-item:hover::before{
+    opacity: 0.35;
+    transform: scaleY(0.5);
+}
+
+.link-container-item.selected::before {
+    /* Transform let the bar expand, transition set the time*/
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+.link-container-item i.nav-bar-icon {
+    width: 22px;
+    height: 22px;
+    margin-right: 20px;
+}
+
+.right-content-area {
+    padding: 50px;
+    height: 100%;
+    width: calc(100%-50px);
+}

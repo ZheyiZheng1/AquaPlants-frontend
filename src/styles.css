@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+/* Globol setting, make sure everything is set and ready.*/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+}
+
+html, body {
+    /* The height must be 100%, other wise the navigation bar will not work correctly*/
+    height: 100%;
+    margin: 0;
+    font-family: "Roboto";
+    background-color: rgb(35, 42, 58);
+}
+
+a {
+    text-decoration: none;
+}
+
+.form-control.ng-touched.ng-invalid {
+    border: 2px solid red;
+}

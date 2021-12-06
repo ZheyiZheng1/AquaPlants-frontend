@@ -1,0 +1,65 @@
+.mainpage-container {
+    height: 100%;
+    background-color: rgb(35, 42, 58);
+    display: flex;
+}
+
+.welcome-nav-bar {
+    background: rgba(0, 0, 0, 0.2);
+    height: 70px;
+    width: 100%;
+}
+
+.nav-bar-link-container {
+    height: 50px;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.aquaPlants-sign{
+    width: 200px;
+    height: 70px;
+    font-size: 30px;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Roboto';
+    cursor: pointer;
+    padding-left: 50px;
+    padding-right: 1100px;
+    padding-bottom: 10px;
+}
+
+.link-container-item {
+    width: 200px;
+    height: 70px;
+    font-size: 30px;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Roboto';
+    cursor: pointer;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.content-area {
+    margin-top: 300px;
+    width: 100%;
+    height: 80%;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.content-area h1 {
+    font-size: 35px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.content-area p {
+    font-size: 20px;
+}
+
+.content-area p a {
+    color: inherit;
+    text-decoration: underline;
+}

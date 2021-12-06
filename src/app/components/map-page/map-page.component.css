@@ -1,0 +1,76 @@
+.map-title {
+    color: rgb(255,255,255);
+    margin-left: 50px;
+    margin-bottom: 30px;
+}
+
+.switch {
+    margin-left: 70px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 100px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: rgb(255,255,255);
+}
+
+.map-container {
+    width: 1400px;
+    margin-left: 50px;
+}
+
+.list-container {
+    width: 1400px;
+    margin-left: 70px;
+}
+
+.background {
+    width: 1250px;
+    height: 250px;
+    margin-left: 70px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.note-container {
+    width: 1000px;
+    color: rgb(255,255,255);
+}
+
+.note-container .row {
+    margin-left: 40px;
+}
+
+.cards-container {
+    align-items: center;
+    float: left;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.7);
+    float: left;
+    width: 400px;
+    height: 220px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.card:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.store-sign-contianer {
+    margin-left: -380px;
+}
+
+.info-container {
+    width: 380px;
+    height: 200px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+

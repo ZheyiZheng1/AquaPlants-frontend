@@ -1,0 +1,130 @@
+<div class="content-container">
+    <form id="search-form" class="search-form" #userRequest="ngForm" (ngSubmit)="plantsSearchSubmit(userRequest)">
+        <div class="row">
+            <input 
+                type="text"
+                class="form-control form-control-short"
+                placeholder="Plant Name" 
+                ngModel name="name"
+                #plantName="ngModel"
+                minlength="3"
+                maxlength="30"
+            >
+            <div class="btn-group">
+                <button class="btn btn-primary" type="submit">Search</button>
+            </div>
+            
+        </div>
+
+        <div class="row"  *ngIf="show">
+            <input 
+                type="averageHeight"
+                class="form-control form-control-short"
+                placeholder="Average Height (cm)" 
+                ngModel name="averageHeight"
+                #plantName="ngModel"
+                maxlength="3"
+            >
+        </div>
+
+        <div class="row"  *ngIf="show">
+            <div class="form-control-select">
+                <select ngModel name="type" #plantName="ngModel" id="form-control form-control-select">
+                    <option value="unset" selected="selected">--Type--</option>
+                    <option value="Algae">Algae</option>
+                    <option value="Floating-Leaved">Floating Leaved</option>
+                    <option value="Submerged-Plants">Submerged Plants</option>
+                    <option value="Emerged-Plants">Emerged Plants</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
+            <div class="form-control-select">
+                <select ngModel name="origin" #origin="ngModel" id="form-control form-control-select">
+                    <option value="unset" selected="selected">--Origin--</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Africa">Africa</option>
+                    <option value="North America">North America</option>
+                    <option value="South America">South America</option>
+                    <option value="Antarctica">Antarctica</option>
+                    <option value="Europe">Europe</option>
+                    <option value="Australia">Australia</option>
+                </select>
+            </div>
+            <div class="form-control-select">
+                <select ngModel name="growthRate" #growthRate="ngModel" id="form-control form-control-select">
+                    <option value="unset" selected="selected">--Growth Rate--</option>
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+            </div>
+           
+            <div class="form-control-select">
+                <select ngModel name="lightDemand" #lightDemand="ngModel" id="form-control form-control-select">
+                    <option value="unset" selected="selected">--Light Demand--</option>
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+            </div>
+            <div class="form-control-select">
+                <select ngModel name="co2Demand" #co2Demand="ngModel" id="form-control form-control-select">
+                    <option value="unset" selected="selected">--C02 Demand--</option>
+                    <option value="None">None</option>
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+            </div>
+            <div class="form-control-select">
+                <select ngModel name="level" #level="ngModel" id="form-control form-control-select">
+                    <option value="unset" selected="selected">--Level--</option>
+                    <option value="Entry">Entry</option>
+                    <option value="Easy">Easy</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Advanced">Advanced</option>
+                </select>
+            </div>
+        </div>
+        
+    </form>
+    <div class="advanced-search-button-wrapper">
+        <p class="advanced-search-button" (click)=changeShowHide()><i class="fas fa-chevron-down" [ngClass]="{'rotate180': show, 'rotate-back': !show}"></i>  Advanced Search</p>
+    </div>
+    
+    <div class="result-part searched-plants" *ngIf="!showRecommend && !noResult">
+        <table>
+            <tr class="table-row">
+                <th class="table-head" *ngFor="let head of tableHeads">
+                    {{head}}
+                </th>
+            </tr>
+            <tr class="table-row" *ngFor="let plant of plants">
+                <a routerLink="{{plant.plantId}}">
+                    <td class="table-data">
+                        <img src={{plant.imageUrl}} alt={{plant.name}} class="search-result-image">
+                    </td>
+                    <td class="table-data">
+                        {{plant.name}}
+                    </td>
+                    <td class="table-data">
+                        {{plant.type}}
+                    </td>
+                    <td class="table-data">
+                        {{plant.origin}}
+                    </td>
+                    <td class="table-data">
+                        {{plant.level}}
+                    </td>
+                </a>
+            </tr>
+        </table>
+    </div>
+    <div class="result-part recommend-plants" *ngIf="showRecommend && !noResult">
+        
+    </div>
+    <div class="result-part no-result" *ngIf="noResult">
+        <p>Sorry, we could not find any related plants. Please try again.</p>
+    </div>
+
+</div>

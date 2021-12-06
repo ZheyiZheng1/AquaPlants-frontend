@@ -1,0 +1,52 @@
+.content-container {
+    width: 100%;
+    height: 90%;
+    margin-left: 250px;
+    margin-top: 50px;
+}
+
+.title {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.form-container {
+    margin-top: 50px;
+    width: 800px;
+    height: 80%;
+    align-items: center;
+}
+
+.labels {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.form-control-short {
+    width: 300px;
+    height: 40px;
+}
+
+.form-control-long {
+    width: 600px;
+    height: 40px;
+}
+
+.form-control-area {
+    width: 600px;
+}
+
+.btn-primary {
+    margin-top: 40px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(35, 42, 58);
+    font-weight: bold;
+}
+
+.alert {
+    width: 100%;
+    height: 60px;
+    background-color: brown;
+    color: rgb(255, 255, 255);
+}

@@ -1,0 +1,66 @@
+<div class="content-container">
+    <h1 class="title">Please let us know how can we do better.</h1>
+
+    <div class="form-container">
+        <form id="contact-us" #userInfo="ngForm" (ngSubmit)="opinionsSubmit(userInfo)">
+            <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid">
+                <div *ngIf="firstName.errors?.required">First Name is required.</div>
+                <div *ngIf="firstName.errors?.minlength">First Name should be minimum {{ firstName.errors?.minlength.requiredLength }} characters.</div>
+            </div>
+            <div class="alert alert-danger" *ngIf="lastName.touched && !lastName.valid">
+                <div *ngIf="lastName.errors?.required">Last Name is required.</div>
+                <div *ngIf="lastName.errors?.minlength">Last Name should be minimum {{ lastName.errors?.minlength.requiredLength }} characters.</div>
+            </div>
+            <div class="alert alert-danger" *ngIf="email.touched && !email.valid">
+                <div *ngIf="email.errors?.required">Email address is required.</div>
+                <div *ngIf="email.errors?.pattern">The Email address does not match the pattern.</div>
+            </div>
+            <div class="row">
+                <label for="firstname" class="labels">First Name</label>
+                <input 
+                    type="text"
+                    class="form-control form-control-short"
+                    placeholder="First Name" 
+                    ngModel name="firstName"
+                    #firstName="ngModel"
+                    required 
+                    minlength="3"
+                    maxlength="16"
+                >
+                <label for="lastname" class="labels">Last Name</label>
+                <input 
+                    type="text"
+                    class="form-control form-control-short"
+                    placeholder="Last Name"
+                    ngModel name="lastName"
+                    #lastName="ngModel"
+                    required 
+                    minlength="3"
+                    maxlength="16"
+                >
+            </div>
+
+            <div class="row">
+                <label for="email" class="labels">Email</label>
+                <input 
+                    type="email"
+                    class="form-control form-control-long"
+                    placeholder="Email"
+                    ngModel name="email"
+                    #email="ngModel"
+                    required
+                    pattern="[a-zA-Z0-9]*@[a-zA-Z0-9]*\.[a-zA-Z0-9]*"
+                >
+            </div>
+            <div class="row">
+                <label for="opinions" class="labels">Your opinions</label>
+                <textarea form="contact-us" name="opinions" class="form-control form-control-area" placeholder="Your opinions" rows="10" ngModel></textarea>
+            </div>
+            
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+        
+        
+        
+    </div>
+</div>

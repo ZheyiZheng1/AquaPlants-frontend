@@ -1,0 +1,43 @@
+<div class="content-container">
+    <form id="search-form" class="search-form" #userRequest="ngForm" (ngSubmit)="articleSearchSubmit(userRequest)">
+        <div class="row">
+            <input 
+                type="text"
+                class="form-control form-control-short"
+                placeholder="Title" 
+                ngModel name="title"
+                #plantName="ngModel"
+                maxlength="30"
+            >
+            <div class="btn-group">
+                <button class="btn btn-primary" type="submit">Search</button>
+            </div>
+            
+        </div>    
+    </form>
+    <div class="result-part searched-plants" *ngIf="!showRecommend && !noResult">
+        <table>
+            <tr class="table-row">
+                <th class="table-head" *ngFor="let head of tableHeads">
+                    {{head}}
+                </th>
+            </tr>
+            <tr class="table-row" *ngFor="let article of articles">
+                
+                    <td class="table-data">
+                        <a routerLink="{{article.articleId}}">{{article.title}}</a>
+                    </td>
+                    <td class="table-data">
+                        {{article.date}}
+                    </td>
+                    <td class="table-data">
+                        {{article.content.substring(0, 400).concat(" ......")}}
+                    </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="result-part no-result" *ngIf="noResult">
+        <p>Sorry, we could not find any related article. Please try again.</p>
+    </div>
+</div>
