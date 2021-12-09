@@ -16,6 +16,7 @@ import { HttpClientModule} from '@angular/common/http';
 import { PlantInfoPageComponent } from './components/plant-info-page/plant-info-page.component';
 import { ArticlePageComponent } from './components/article-page/article-page.component';
 import { ArticleInfoPageComponent } from './components/article-info-page/article-info-page.component';
+import { AuthModule } from '@auth0/auth0-angular';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,11 @@ import { ArticleInfoPageComponent } from './components/article-info-page/article
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AuthModule.forRoot({
+      domain: 'alenz-0318.us.auth0.com',
+      clientId: 'Me81WwX5TlcmsEUJhF3aJSDK2TzrTUGI'
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

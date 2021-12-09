@@ -17,8 +17,13 @@
             <a routerLink="/home/contactus" class="link-container-item">
                 Contact Us
             </a>
-            <a routerLink="/home/contactus" class="link-container-item">
-                Login
+
+            <a routerLink="" (click)="logout()" class="link-container-item" *ngIf="(auth.isAuthenticated$ | async)">
+                Log out
+            </a>
+
+            <a routerLink="" (click)="auth.loginWithRedirect()" class="link-container-item" *ngIf="!(auth.isAuthenticated$ | async)">
+                Log in
             </a>
         </div>
     </div>
