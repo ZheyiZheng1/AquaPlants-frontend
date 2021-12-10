@@ -1,0 +1,29 @@
+<div class="user-profile-container" *ngIf="auth.user$ | async as user">
+    <div class="row align-items-center profile-header">
+      <div class="col-md-2 mb-3">
+        <img
+          [src]="user.picture"
+          alt="User's profile picture"
+          class="rounded-circle img-fluid profile-picture"
+        />
+      </div>
+      <div class="col-md text-center text-md-left greeting-nessage">
+        <h2>Welcome back, {{ user.nickname }}</h2>
+        
+      </div>
+    </div>
+  
+    <div class="row profile-detail-area" *ngIf="profileJson">
+      <div class="col-12 p-4 profile-detail">
+        <p>User Name: {{ user.nickname }}</p>
+        <p>Account Name: {{ user.name }}</p>
+        <p>Email: {{ user.email }}</p>
+        <p>Email verified: {{ user.email_verified }}</p>
+        <p>Last login: {{user.updated_at}}</p>
+        <p><a routerLink="" (click)="logout()">
+            <i class="fas fa-sign-in-alt nav-bar-icon"></i>
+            Log out
+        </a></p>
+      </div>
+    </div>
+</div>

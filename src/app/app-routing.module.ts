@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from '@auth0/auth0-angular';
 
 import { WelcomePageComponent } from './components/welcome-page/welcome-page.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
@@ -11,6 +12,7 @@ import { ErrorPageComponent } from './components/error-page/error-page.component
 import { PlantInfoPageComponent } from './components/plant-info-page/plant-info-page.component';
 import { ArticlePageComponent } from './components/article-page/article-page.component';
 import { ArticleInfoPageComponent } from './components/article-info-page/article-info-page.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
 
 const routes: Routes = [
   {path: "home", component: MainPageComponent, children: [
@@ -21,6 +23,7 @@ const routes: Routes = [
     {path: "search/:plantId", component: PlantInfoPageComponent},
     {path: "article", component: ArticlePageComponent},
     {path: "article/:articleId", component: ArticleInfoPageComponent},
+    {path: "profile", component: UserProfileComponent, canActivate: [AuthGuard]}
   ]},
   {path: "", component: WelcomePageComponent},
   {path:"**", component: ErrorPageComponent}

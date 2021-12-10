@@ -17,6 +17,7 @@ import { PlantInfoPageComponent } from './components/plant-info-page/plant-info-
 import { ArticlePageComponent } from './components/article-page/article-page.component';
 import { ArticleInfoPageComponent } from './components/article-info-page/article-info-page.component';
 import { AuthModule } from '@auth0/auth0-angular';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { AuthModule } from '@auth0/auth0-angular';
     ErrorPageComponent,
     PlantInfoPageComponent,
     ArticlePageComponent,
-    ArticleInfoPageComponent
+    ArticleInfoPageComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule,
