@@ -1,0 +1,26 @@
+.user-profile-container {
+    width: 1300px;
+    margin-top: 50px;
+    margin-left: 90px;
+}
+
+.greeting-nessage {
+    font-size: 45px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.profile-detail-area {
+    margin-top: 60px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.profile-detail {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 24px;
+}
+
+.profile-detail p {
+    margin-top: 17px;
+    margin-bottom: 17px;
+}

@@ -2,7 +2,7 @@
     <div class="left-nav-bar">
         <div class="nav-bar-link-container">
             <!-- routerLinkActive="selected" : only apply the selected class to the <a> when the user is in that routerLink-->
-            <a routerLink="/home/search" routerLinkActive="selected" class="link-container-item">
+                <a routerLink="/home/search" routerLinkActive="selected" class="link-container-item">
                 <i class="fas fa-search nav-bar-icon"></i>
                 Search
             </a>
@@ -22,15 +22,18 @@
                 <i class="fas fa-envelope nav-bar-icon"></i>
                 Contact Us
             </a>
-
+            <a routerLink="/home/profile" routerLinkActive="selected" class="link-container-item">
+                <i class="fas fa-user nav-bar-icon"></i>
+                User Profile
+            </a>
             <ng-container *ngIf="(auth.isAuthenticated$ | async)">
-                <a routerLink="" (click)="logout()" class="link-container-item">
+                <a routerLink="" (click)="logout()" class="link-container-item log-link">
                     <i class="fas fa-sign-in-alt nav-bar-icon"></i>
                     Log out
                 </a>
             </ng-container>
             <ng-container *ngIf="!(auth.isAuthenticated$ | async)">
-                <a routerLink="" (click)="auth.loginWithRedirect()" class="link-container-item">
+                <a routerLink="" (click)="auth.loginWithRedirect()" class="link-container-item log-link">
                     <i class="fas fa-sign-in-alt nav-bar-icon"></i>
                     Log in
                 </a>
