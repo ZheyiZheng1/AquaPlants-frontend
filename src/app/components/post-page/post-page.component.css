@@ -1,0 +1,118 @@
+.left-side-post-container {
+    width: 600px;
+    margin-left: 300px;
+    height: 100%;
+    
+}
+
+.right-side-link-container {
+    width: 300px;
+    margin-left: 150px;
+    margin-top: 100px;
+    
+}
+
+.right-side-link-container hr {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.link-container-name {
+    text-decoration: none;
+    display: flex;
+    position: relative;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Roboto';
+    cursor: pointer;
+}
+
+.link-container-item {
+    text-decoration: none;
+    display: flex;
+    position: relative;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Roboto';
+    cursor: pointer;
+}
+
+.link-container-item:hover {
+    color: rgba(255, 255, 255, 1);
+}
+
+.link-container-item::before {
+    /*left side bar on links*/
+    /* This is a sudo element for animation purpose. It will not show if it does not have content.*/
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    top: 0;
+    background-color: rgba(255, 255, 255, 1);
+    /* Set opacity to 0, as default */
+    opacity: 0;
+    /* Transform let the bar expand, transition set the time*/
+    transform: scaleX(0);
+    transition: transform 0.2s, opacity 0.2s;
+    margin-top: 25px;
+    margin-left: -45px;
+}
+
+.link-container-item:hover::before{
+    opacity: 0.35;
+    transform: scaleX(0.5);
+}
+
+.post-card {
+    width: 600px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.nickname-row {
+    height: 80px;
+}
+
+.nickname-wrapper {
+    color: rgba(0, 0, 0, 0.8);
+    margin-left: 50px;
+    padding-top: 25px;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.img-wrapper {
+    margin-left: 15px;
+    height: 600px;
+    width: 600px;
+}
+
+.icon-row {
+    height: 20px;
+    margin-top: 12px;
+}
+
+.comments-link {
+    color: black;
+    font-weight: bold;
+    width: 60px;
+    height: 60px;
+    margin-left: 15px;
+}
+
+.form-row {
+    align-items: center;
+}
+
+.comment-form {
+    width: 600px;
+    margin-left: 5px;
+}
+
+
+.placeholder {
+    height: 50px;
+    width: 600px;
+    color: rgba(0, 0, 0, 0.8);
+}

@@ -13,6 +13,7 @@ import { PlantInfoPageComponent } from './components/plant-info-page/plant-info-
 import { ArticlePageComponent } from './components/article-page/article-page.component';
 import { ArticleInfoPageComponent } from './components/article-info-page/article-info-page.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { PostPageComponent } from './components/post-page/post-page.component';
 
 const routes: Routes = [
   {path: "home", component: MainPageComponent, children: [
@@ -23,7 +24,8 @@ const routes: Routes = [
     {path: "search/:plantId", component: PlantInfoPageComponent},
     {path: "article", component: ArticlePageComponent},
     {path: "article/:articleId", component: ArticleInfoPageComponent},
-    {path: "profile", component: UserProfileComponent, canActivate: [AuthGuard]}
+    {path: "profile", component: UserProfileComponent, canActivate: [AuthGuard]},
+    {path: "post", component: PostPageComponent, canActivate: [AuthGuard]},
   ]},
   {path: "", component: WelcomePageComponent},
   {path:"**", component: ErrorPageComponent}
