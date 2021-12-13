@@ -1,6 +1,6 @@
 export interface PostImage {
-    "postId":string,
-    "imageId":string,
+    "postId":number,
+    "imageId":number,
     // image means image address
     "image":string,
     "thumbImage":string
