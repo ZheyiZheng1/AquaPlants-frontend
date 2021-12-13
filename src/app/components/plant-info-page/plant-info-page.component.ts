@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import {Router} from "@angular/router"
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { Plants } from 'src/app/interfaces/plants';
 
