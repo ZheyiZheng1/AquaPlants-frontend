@@ -74,12 +74,12 @@
 }
 
 .nickname-wrapper {
-    color: rgba(0, 0, 0, 0.8);
+    color: rgba(0, 0, 0, 0.7);
     margin-left: 50px;
-    padding-top: 25px;
+    padding-top: 27px;
     font-family: 'Roboto';
     font-weight: bold;
-    font-size: 24px;
+    font-size: 18px;
 }
 
 .img-wrapper {
@@ -94,12 +94,26 @@
 }
 
 .comments-link {
-    color: black;
+    color: rgba(0, 0, 0, 0.7);
     font-weight: bold;
     width: 60px;
     height: 60px;
     margin-left: 15px;
 }
+
+.liked-link {
+    color: rgba(255, 0, 0, 0.7);
+    font-weight: bold;
+    width: 60px;
+    height: 60px;
+    margin-left: 15px;
+}
+
+.comments-link :hover {
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+}
+
 
 .form-row {
     align-items: center;
