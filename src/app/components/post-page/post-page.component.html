@@ -23,12 +23,15 @@
                 </div>
                 <div class="icon-row">
                     <!-- comments button and like button-->
-                    <a routerLink="/home/search" routerLinkActive="selected" class="comments-link">
+                    <a routerLink="" routerLinkActive="selected" class="comments-link">
                         Comments
                     </a>
                     
-                    <a routerLink="/home/search" routerLinkActive="selected" class="comments-link">
+                    <a class="comments-link" *ngIf = !getLike(indexOfPost) (click)='like(indexOfPost)'>
                         Like
+                    </a>
+                    <a class="liked-link" *ngIf = getLike(indexOfPost) (click)='unlike(indexOfPost)'> 
+                        Liked!
                     </a>
                 </div>
                 <hr>
