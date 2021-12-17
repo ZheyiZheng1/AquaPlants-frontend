@@ -35,6 +35,16 @@
                     </a>
                 </div>
                 <hr>
+                <div class="comment-row">
+                    <!-- My comments -->
+                    <div class="row" *ngFor="let myComment of myCommentArray">
+                        <div class="comment-wrapper">
+                            <p>{{myComment[indexOfPost]}}</p>
+                        </div>
+                        
+                    </div>
+                    <!-- Others' comments, only showing top five -->
+                </div>
                 <div class="form-row">
                     <!-- leave a comment...-->
                     <form class="comment-form" id="comment-form" #userRequest="ngForm" (ngSubmit)="commentSubmit(userRequest)">
